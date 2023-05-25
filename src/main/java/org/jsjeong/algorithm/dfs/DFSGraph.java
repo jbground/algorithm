@@ -1,6 +1,4 @@
-package org.jsjeong.algorithm.search.dfs;
-
-import org.jsjeong.algorithm.search.bfs.BFSGraph;
+package org.jsjeong.algorithm.dfs;
 
 import java.util.LinkedList;
 import java.util.Stack;

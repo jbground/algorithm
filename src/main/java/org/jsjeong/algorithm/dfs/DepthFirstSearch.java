@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.search.dfs;
+package org.jsjeong.algorithm.dfs;
 
 public class DepthFirstSearch {
 

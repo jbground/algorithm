@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.search.bfs;
+package org.jsjeong.algorithm.bfs;
 
 import sun.misc.Queue;
 

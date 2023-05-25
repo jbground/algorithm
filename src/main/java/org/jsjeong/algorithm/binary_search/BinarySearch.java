@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.search.binary;
+package org.jsjeong.algorithm.binary_search;
 
 /**
  * 정렬되어 있는 리스트에서 탐색 범위를 절반씩 좁혀가며 데이터를 탐색하는 방법
