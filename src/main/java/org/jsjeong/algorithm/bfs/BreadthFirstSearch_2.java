@@ -2,6 +2,7 @@ package org.jsjeong.algorithm.bfs;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 너비 우선 탐색
@@ -12,85 +13,138 @@ import java.util.LinkedList;
  */
 public class BreadthFirstSearch_2 {
 
-    /*  의사코드(pseudocode)
+    private static final int[] dx = {-1, 0, 1, 0};//방향 벡터
+    private static final int[] dy = {0, 1, 0, -1};//방향 벡터
+    private int n, m = 0; //최대 x, y 좌표
+    private final Queue<Node> queue = new LinkedList<>();
+    private int[][] map;
+    private boolean[][] visited; //방문 여부 체크
+    private int[][] dis;
 
-    void search(Node root) {
-        Queue queue = new Queue();
-        root.marked = true; // (방문한 노드 체크)
-        queue.enqueue(root); // 1-1. 큐의 끝에 추가
+    public BreadthFirstSearch_2(int[][] map){
+        this.map = map;
+        this.n = map.length;
+        this.m = map[0].length;
 
-        // 3. 큐가 소진될 때까지 계속한다.
+        this.visited = new boolean[n][m];
+        this.dis = new int[n][m];
+    }
+
+    public void initialize(int start_x, int start_y){
+        visited[start_x][start_y] = true;
+        queue.offer(new Node(start_x, start_y));
+
+    }
+
+    public void bfs(int start_x, int start_y) {
+        initialize(start_x, start_y);
+
         while (!queue.isEmpty()) {
-            Node r = queue.dequeue(); // 큐의 앞에서 노드 추출
-            visit(r); // 2-1. 큐에서 추출한 노드 방문
-            // 2-2. 큐에서 꺼낸 노드와 인접한 노드들을 모두 차례로 방문한다.
-            foreach (Node n in r.adjacent) {
-                if (n.marked == false) {
-                    n.marked = true; // (방문한 노드 체크)
-                    queue.enqueue(n); // 2-3. 큐의 끝에 추가
+            Node tmp = queue.poll();
+
+            for (int i = 0; i < 4; i++) { // 위, 아래, 왼쪽, 오른쪽 4방향 인접 노드 탐색
+                int nx = tmp.x + dx[i]; //인접 노드 x 값
+                int ny = tmp.y + dy[i]; //인접 노드 y 값
+
+                if (nx < 0|| nx >= n || ny < 0 || ny >= m) { //유효 범위 이탈 방지
+                    continue;
                 }
+
+                if(map[nx][ny] == 1){ // 1(벽)일 경우 패스
+                    continue;
+                }
+
+                //이미 방문된 경우 스킵
+                if (visited[nx][ny]) {
+                    continue;
+                }else{
+                    visited[nx][ny] = true; //방문하지 않은 경우 방문 체크
+                }
+
+                dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
+                queue.offer(new Node(nx, ny)); //방문할 인접 노드의 인접 노드 추가
+
             }
         }
+        print();
     }
-    */
 
-    public static void solution(int[][] arr){
-        Graph g = new Graph(7);
+    public void bfs(int start_x, int start_y, int end_x, int end_y) {
 
-        for (int[] ints : arr) {
-            g.addEdge(ints[0], ints[1]);
+        initialize(start_x, start_y);
+
+        while (!queue.isEmpty()) {
+            Node tmp = queue.poll();
+
+            for (int i = 0; i < 4; i++) { //인접 노드 탐색
+                int nx = tmp.x + dx[i]; //인접 노드 x 값
+                int ny = tmp.y + dy[i]; //인접 노드 y 값
+
+                if (nx < 0|| nx >= n || ny < 0 || ny >= m) { //유효 범위 이탈 방지
+                    continue;
+                }
+
+                if(map[nx][ny] == 1){ // 1(벽)일 경우 패스
+                    continue;
+                }
+
+                if(nx == end_x && ny == end_y){ //목적지 도착한 경우 종료
+                    dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
+                    print();
+                    return;
+                }
+
+                //이미 방문된 경우 스킵
+                if (visited[nx][ny]) {
+                    continue;
+                }else{
+                    visited[nx][ny] = true; //방문하지 않은 경우 방문 체크
+                }
+
+                //방문하지 않은 경우
+                dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
+                queue.offer(new Node(nx, ny));
+
+            }
         }
 
-        g.BFS(1);
+    }
+
+    public void print(){
+        for(int[] row: dis){
+            for (int col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static class Node implements Comparable<Node> {
+        private int x;
+        private int y;
+
+        public Node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+
+        @Override
+        public int compareTo(Node o) {
+            return 0;
+        }
     }
 
     public static void main(String[] args) {
-        int[][] arr = {{1,3}, {1,4}, {2,1}, {2,5}, {3,4}, {4,5}, {4,6}, {6,2}, {6,5}};
-        solution(arr);
+        int[][] map = new int[][]{{0, 0, 0, 0, 0}
+                                , {0, 0, 1, 1, 0}
+                                , {0, 0, 1, 0, 0}
+                                , {0, 0, 1, 0, 0}
+                                , {1, 0, 0, 0, 0}};
+
+        BreadthFirstSearch_2 bfs = new BreadthFirstSearch_2(map);
+        bfs.bfs(1, 1, 1, 4);
+        bfs.bfs(1, 1);
     }
-    static class Graph{
-        private int V; // 노드의 개수
-        private LinkedList<Integer> adj[]; // 인접 리스트
 
-        /** 생성자 */
-        Graph(int v) {
-            V = v;
-            adj = new LinkedList[v];
-            for (int i=0; i<v; ++i) // 인접 리스트 초기화
-                adj[i] = new LinkedList();
-        }
-
-        /** 노드를 연결 v->w */
-        void addEdge(int v, int w) { adj[v].add(w); }
-
-        /** s를 시작 노드으로 한 BFS로 탐색하면서 탐색한 노드들을 출력 */
-        void BFS(int s) {
-            // 노드의 방문 여부 판단 (초깃값: false)
-            boolean visited[] = new boolean[V];
-            // BFS 구현을 위한 큐(Queue) 생성
-            LinkedList<Integer> queue = new LinkedList<Integer>();
-
-            // 현재 노드를 방문한 것으로 표시하고 큐에 삽입(enqueue)
-            visited[s] = true;
-            queue.add(s);
-
-            // 큐(Queue)가 빌 때까지 반복
-            while (queue.size() != 0) {
-                // 방문한 노드를 큐에서 추출(dequeue)하고 값을 출력
-                s = queue.poll();
-                System.out.print(s + " ");
-
-                // 방문한 노드와 인접한 모든 노드를 가져온다.
-                Iterator<Integer> i = adj[s].listIterator();
-                while (i.hasNext()) {
-                    int n = i.next();
-                    // 방문하지 않은 노드면 방문한 것으로 표시하고 큐에 삽입(enqueue)
-                    if (!visited[n]) {
-                        visited[n] = true;
-                        queue.add(n);
-                    }
-                }
-            }
-        }
-    }
 }

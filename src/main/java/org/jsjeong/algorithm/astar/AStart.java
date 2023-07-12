@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.route;
+package org.jsjeong.algorithm.astar;
 
 
 import java.util.*;
@@ -46,7 +46,6 @@ public class AStart {
 
     //우선순위 큐 : 예약된 것들 중 가장 좋은 후보를 빠르게 뽑아오기 위한 도구
     Queue<Point> queue = new PriorityQueue<>();
-
     List<Point> routeList;
 
     static int n,m;
@@ -84,8 +83,6 @@ public class AStart {
             }
 
         }
-
-
 
         a_star(map, start, end);
     }

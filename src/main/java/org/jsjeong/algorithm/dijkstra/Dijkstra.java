@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.greedy;
+package org.jsjeong.algorithm.dijkstra;
 
 import java.util.ArrayList;
 import java.util.Arrays;
