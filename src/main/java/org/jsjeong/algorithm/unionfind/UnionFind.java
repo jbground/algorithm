@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.greedy;
+package org.jsjeong.algorithm.unionfind;
 
 import java.util.Scanner;
 
