@@ -7,7 +7,6 @@ public class SampleCode2 {
     private static final int[][] coordinate = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}}; //{-1, -1}, {-1, 1}, {1, -1}, {1, 1}
 
     private int n, m = 0; //최대 x, y 좌표
-    private final Queue<SampleCode.Node> queue = new PriorityQueue<>();
     private final char[][] map;
 
     private final List<Node> open_list = new ArrayList<>();
@@ -28,7 +27,7 @@ public class SampleCode2 {
 
         while (!open_list.isEmpty()) {
 
-            // Get the current node
+            // Get the current node, Priority Queue 로 대체 가능
             Node current_node = open_list.get(0);
             int current_index = 0;
 
@@ -78,7 +77,7 @@ public class SampleCode2 {
 
                     // Child is on the closed list
                     for(Node c2 : closed_list){
-                        if(child == c2){
+                        if(child.x == c2.x && child.y == c2.y){
                             continue;
                         }
                     }
@@ -89,10 +88,8 @@ public class SampleCode2 {
                     child.F = child.G + child.H;
 
                     for(Node node : open_list){
-                        if(child == node){
-                            if(child.G > node.G){
-                                continue;
-                            }
+                        if(child.equals(node) && child.G > node.G){
+                            continue;
                         }
                     }
 
@@ -163,6 +160,6 @@ public class SampleCode2 {
                         , {'0', '0', '0', '0', '1', '0', '0', '0', '0', '0'}};
 
         SampleCode2 sample = new SampleCode2(map);
-        sample.astar(1, 1, 8, 8);
+        sample.astar(1, 1, 5, 8);
     }
 }

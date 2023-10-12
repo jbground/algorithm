@@ -34,8 +34,6 @@ public class Dijkstra {
             graph.get(ints[0]).add(new Edge(ints));
         }
 
-        System.out.println(graph);
-
         PriorityQueue<Edge> pq = new PriorityQueue<>();
 
         int v = 1;
@@ -59,7 +57,10 @@ public class Dijkstra {
             }
 
         }
-        System.out.println();
+
+        for(int i = 0; i< dis.length; i++){
+            System.out.print(dis[i] + " ");
+        }
     }
 
     public static void main(String[] args) {
