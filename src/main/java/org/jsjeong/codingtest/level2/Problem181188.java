@@ -8,6 +8,12 @@ import java.util.List;
 
 public class Problem181188 {
 
+    public static void main(String[] args) {
+        int[][] arr = {{0, 5}, {4, 8},  {10, 14},  {11, 13},  {5, 12},  {3, 7},  {1, 4}, {4,5}, {11, 15}, {12, 13}};
+        solution(arr);
+
+    }
+
     public static void solution(int[][] arr){
         int answer = 0;
         List<Missile> missileList = new ArrayList<>();
@@ -35,11 +41,7 @@ public class Problem181188 {
         System.out.println(answer);
     }
 
-    public static void main(String[] args) {
-        int[][] arr = {{0, 5}, {4, 8},  {10, 14},  {11, 13},  {5, 12},  {3, 7},  {1, 4}, {4,5}, {11, 15}, {12, 13}};
-        solution(arr);
 
-    }
 
     static class Missile implements Comparable<Missile>{
 

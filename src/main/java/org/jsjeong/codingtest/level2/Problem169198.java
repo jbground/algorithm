@@ -9,6 +9,11 @@ public class Problem169198 {
     int horizontal;
     int vertical;
 
+    public static void main(String[] args) {
+        int[][] arr = {{7, 7}, {2, 7}, {7, 3}};
+        System.out.println(Arrays.toString(solution(10, 10, 3, 7, arr)));
+    }
+
     public static int[] solution(int m, int n, int startX, int startY, int[][] balls) {
         int[] answer = new int[balls.length];
 
@@ -46,8 +51,5 @@ public class Problem169198 {
         return answer;
     }
 
-    public static void main(String[] args) {
-        int[][] arr = {{7, 7}, {2, 7}, {7, 3}};
-        System.out.println(Arrays.toString(solution(10, 10, 3, 7, arr)));
-    }
+
 }

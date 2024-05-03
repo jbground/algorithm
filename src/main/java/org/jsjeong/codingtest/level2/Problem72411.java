@@ -4,6 +4,11 @@ import java.util.*;
 
 public class Problem72411 {
 
+    public static void main(String[] args) {
+        Problem72411 problem = new Problem72411();
+        problem.solution(new String[]{"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"}, new int[]{2, 3, 4});
+    }
+
     public String[] solution(String[] orders, int[] course) {
         Set<Character> tmp = new HashSet<>();
         for (String s : orders) {
@@ -34,13 +39,12 @@ public class Problem72411 {
                     int count = rank.get(c);
                     rank.put(c, ++count);
 
-                }else{
+                } else {
                     rank.put(c, 1);
                 }
 
             }
         }
-
 
 
         String[] answer = {};
@@ -60,8 +64,5 @@ public class Problem72411 {
 
     }
 
-    public static void main(String[] args) {
-        Problem72411 problem = new Problem72411();
-        problem.solution(new String[]{"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"}, new int[]{2, 3, 4});
-    }
+
 }

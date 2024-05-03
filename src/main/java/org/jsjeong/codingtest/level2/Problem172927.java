@@ -10,6 +10,12 @@ import java.util.*;
  */
 public class Problem172927 {
 
+    public static void main(String[] args) {
+        int[] picks = {1, 1, 0}; // dia, iron, stone 갯수
+        String[] minerals = {"diamond", "diamond", "diamond", "diamond", "diamond", "iron", "iron", "diamond", "iron", "stone", "iron", "iron", "diamond", "iron", "stone", "diamond", "diamond", "diamond", "diamond", "diamond"};
+        System.out.println(solution(picks, minerals));
+    }
+
     public static int solution(int[] picks, String[] minerals) {
         int answer = 0;
 
@@ -108,11 +114,7 @@ public class Problem172927 {
         return result;
     }
 
-    public static void main(String[] args) {
-        int[] picks = {1, 1, 0}; // dia, iron, stone 갯수
-        String[] minerals = {"diamond", "diamond", "diamond", "diamond", "diamond", "iron", "iron", "diamond", "iron", "stone", "iron", "iron", "diamond", "iron", "stone", "diamond", "diamond", "diamond", "diamond", "diamond"};
-        System.out.println(solution(picks, minerals));
-    }
+
 
 
 }
