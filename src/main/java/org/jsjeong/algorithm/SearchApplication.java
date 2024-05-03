@@ -1,8 +1,8 @@
 package org.jsjeong.algorithm;
 
-import org.jsjeong.algorithm.bfs.BFSGraph;
-import org.jsjeong.algorithm.dfs.DFSGraph;
-import org.jsjeong.algorithm.dfs.DFSReGraph;
+import org.jsjeong.algorithm.circuit.bfs.BFSGraph;
+import org.jsjeong.algorithm.circuit.dfs.DFSGraph;
+import org.jsjeong.algorithm.circuit.dfs.DFSReGraph;
 
 public class SearchApplication {
     public static void main(String[] args) throws InterruptedException {

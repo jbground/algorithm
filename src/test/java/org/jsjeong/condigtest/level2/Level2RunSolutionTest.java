@@ -1,6 +1,7 @@
 package org.jsjeong.condigtest.level2;
 
 import org.jsjeong.codingtest.level2.*;
+import org.jsjeong.codingtest.programmers.level2.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
