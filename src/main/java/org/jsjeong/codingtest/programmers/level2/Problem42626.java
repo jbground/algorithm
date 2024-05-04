@@ -1,8 +1,12 @@
-package org.jsjeong.codingtest.programmers;
+package org.jsjeong.codingtest.programmers.level2;
 
 import java.util.Arrays;
 
-public class Problem1 {
+/**
+ * 더 맵게
+ * https://school.programmers.co.kr/learn/courses/30/lessons/42626
+ */
+public class Problem42626 {
     public static void main(String[] args) {
 
         int i = 15;

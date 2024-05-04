@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.circuit.dfs;
+package org.jsjeong.algorithm.routing.dfs;
 
 /**
  * 이진 트리의 깊이 우선 탐색

@@ -87,7 +87,7 @@ public class Problem42839 {
 //            arr[Integer.parseInt(s)]++;
 //        }
 //        for(int i = 2; i < 1000000; i ++){
-//            if (isPrime(i) && contains(arr, i)){
+//            if (isPrime(i) && isContains(arr, i)){
 //                answer++;
 //            }
 //        }

@@ -1,12 +1,12 @@
-package org.jsjeong.condigtest.level2;
+package org.jsjeong.condigtest.programmers.level2;
 
-import org.jsjeong.codingtest.level2.*;
+import org.jsjeong.codingtest.programmers.level2.Problem49993;
 import org.jsjeong.codingtest.programmers.level2.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class Level2RunSolutionTest {
+public class Level2Runner {
 
 
     @Test
@@ -110,5 +110,53 @@ public class Level2RunSolutionTest {
 //        System.out.println(problem.solution("AAAAE"));
         System.out.println(problem.solution("EIO"));
 
+    }
+
+    @Test
+    void Problem12914() {
+        Problem12914 problem = new Problem12914();
+        System.out.println(problem.solution(4));
+
+    }
+
+    @Test
+    void Problem12923(){
+        Problem12923 problem = new Problem12923();
+//        System.out.println(Arrays.toString(problem.solution(1, 10)));
+        System.out.println(Arrays.toString(problem.solution(232412340, 232412345)));
+
+    }
+
+    @Test
+    void Problem12913(){
+        Problem12913 problem = new Problem12913();
+        System.out.println(problem.solution(new int[][]{{1,2,3,5},{5,6,7,8},{4,3,2,1}}));
+    }
+
+    @Test
+    void Problem12936(){
+        Problem12936 problem = new Problem12936();
+        System.out.println(Arrays.toString(problem.solution(3, 5)));
+    }
+
+    @Test
+    void Problem49993(){
+        Problem49993 problem = new Problem49993();
+        System.out.println(problem.solution("CBD", new String[]{"BACDE", "CBADF", "AECB", "BDA"}));
+    }
+
+    @Test
+    void Problem159993(){
+        Problem159993 problem = new Problem159993();
+//        String[] arr = {"SOOOL","XXXXO","OOOOO","OXXXX","OOOOE"};
+        String[] arr = {"LOOXS", "OOOOX", "OOOOO", "OOOOO", "EOOOO"};
+        System.out.println(problem.solution(arr));
+
+    }
+
+    @Test
+    void Problem42746(){
+        Problem42746 problem = new Problem42746();
+        System.out.println(problem.solution(new int[]{3, 30, 34, 5, 9}));
     }
 }

@@ -1,4 +1,4 @@
-package org.jsjeong.algorithm.circuit.bfs;
+package org.jsjeong.algorithm.routing.bfs;
 
 import java.util.*;
 

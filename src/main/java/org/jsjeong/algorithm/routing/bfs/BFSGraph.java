@@ -1,11 +1,14 @@
-package org.jsjeong.algorithm.circuit.dfs;
+package org.jsjeong.algorithm.routing.bfs;
+
+import sun.misc.Queue;
 
 import java.util.LinkedList;
 
 /**
- * 깊이 우선 탐색 재귀함수 사용
+ * 넓이 우선 탐색
  */
-public class DFSReGraph {
+public class BFSGraph {
+
     class Node {
         int data;
         LinkedList<Node> adjacent;
@@ -18,14 +21,14 @@ public class DFSReGraph {
         }
     }
 
-    public DFSReGraph(int size) {
+    Node[] nodes;
+
+    public BFSGraph(int size) {
         nodes = new Node[size];
         for (int i = 0; i < size; i++) {
             nodes[i] = new Node(i);
         }
     }
-
-    Node[] nodes;
 
     public void addEdge(int i1, int i2) {
         Node n1 = nodes[i1];
@@ -36,25 +39,27 @@ public class DFSReGraph {
             n2.adjacent.add(n1);
     }
 
-    void dfs(Node r) {
-        if(r == null) return;
-        r.marked = true;
-        visit(r);
-        for (Node n : r.adjacent) {
-            if(n.marked == false)
-                dfs(n);
+    void bfs(int index) throws InterruptedException {
+        Node root = nodes[index];
+        Queue<Node> queue = new Queue<>();
+        queue.enqueue(root);
+        root.marked = true;
+        while (!queue.isEmpty()) {
+            Node r = queue.dequeue();
+            for (Node n : r.adjacent) {
+                if (n.marked == false) {
+                    n.marked = true;
+                    queue.enqueue(n);
+                }
+            }
+            visit(r);
         }
     }
 
-    void dfs(int index) {
-        Node r = nodes[index];
-        dfs(r);
+    public void bfs() throws InterruptedException {
+        bfs(0);
     }
 
-    public void dfs() {
-        dfs(0);
-
-    }
     void visit(Node r) {
         System.out.print(r.data + " ");
     }

@@ -3,7 +3,7 @@ package org.jsjeong.codingtest.programmers.level2;
 import java.util.*;
 
 /**
- * 모음사전
+ * 모음 사전
  * https://school.programmers.co.kr/learn/courses/30/lessons/84512
  *
  */

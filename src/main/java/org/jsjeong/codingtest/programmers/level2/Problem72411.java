@@ -2,6 +2,10 @@ package org.jsjeong.codingtest.programmers.level2;
 
 import java.util.*;
 
+/**
+ * 메뉴 리뉴얼
+ * https://school.programmers.co.kr/learn/courses/30/lessons/72411
+ */
 public class Problem72411 {
 
     public static void main(String[] args) {

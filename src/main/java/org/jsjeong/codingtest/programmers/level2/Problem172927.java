@@ -4,6 +4,8 @@ import java.util.*;
 
 
 /**
+ * 광물 캐기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/172927
  * dia = dia 1, iron 1, stone 1
  * iron = dia 5, iron 1, stone 1
  * stone = dia 25, iron 5, stone 1

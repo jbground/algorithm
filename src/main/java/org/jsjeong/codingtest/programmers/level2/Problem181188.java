@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 요격 시스템
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181188
+ */
 public class Problem181188 {
 
     public static void main(String[] args) {

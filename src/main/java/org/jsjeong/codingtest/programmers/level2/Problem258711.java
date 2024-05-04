@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * https://school.programmers.co.kr/learn/courses/30/lessons/258711#qna
+ * 도넛과 막대 그래프
+ * https://school.programmers.co.kr/learn/courses/30/lessons/258711
  */
 public class Problem258711 {
 

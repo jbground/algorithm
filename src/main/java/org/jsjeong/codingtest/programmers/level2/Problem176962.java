@@ -2,6 +2,10 @@ package org.jsjeong.codingtest.programmers.level2;
 
 import java.util.*;
 
+/**
+ * 과제 진행하기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/176962
+ */
 public class Problem176962 {
 
     class Pair {

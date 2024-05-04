@@ -2,6 +2,10 @@ package org.jsjeong.codingtest.programmers.level2;
 
 import java.util.Arrays;
 
+/**
+ *마법의 엘리베이터
+ * https://school.programmers.co.kr/learn/courses/30/lessons/148653
+ */
 public class Problem148653 {
 
     static int[] range = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};

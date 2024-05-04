@@ -1,10 +1,14 @@
-package org.jsjeong.codingtest.programmers;
+package org.jsjeong.codingtest.programmers.level2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.stream.IntStream;
 
+/**
+ * 광물 캐기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/172927
+ */
 public class Problem557556 {
 
 //[1, 3, 2]	["diamond", "diamond", "diamond", "iron", "iron", "diamond", "iron", "stone"]	12

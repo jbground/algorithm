@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 당구 연습
+ * https://school.programmers.co.kr/learn/courses/30/lessons/169198
+ */
 public class Problem169198 {
 
     int horizontal;

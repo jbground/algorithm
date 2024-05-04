@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * 무인도 여행
  * https://school.programmers.co.kr/learn/courses/30/lessons/154540
  */
 public class Problem154540 {

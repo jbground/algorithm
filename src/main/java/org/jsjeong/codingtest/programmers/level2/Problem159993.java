@@ -4,7 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * BFS 문제
+ * 미로 탈출
+ * https://school.programmers.co.kr/learn/courses/30/lessons/159993
+ * BFS 적용
  */
 public class Problem159993 {
 
@@ -12,7 +14,7 @@ public class Problem159993 {
     static final int[] dy = {0, 1, 0, -1};
     static int n,m;
 
-    public static int solution(String[] maps) {
+    public int solution(String[] maps) {
         int answer = 0;
         n = maps.length;
         m = maps[0].length();
@@ -51,7 +53,7 @@ public class Problem159993 {
         return answer;
     }
 
-    public static int bfs(char[][] arr, Point start, Point dest){
+    public int bfs(char[][] arr, Point start, Point dest){
         Queue<Point> queue = new LinkedList<>();
         queue.add(start);
         boolean[][] visited = new boolean[n][m];
@@ -97,10 +99,4 @@ public class Problem159993 {
         }
     }
 
-    public static void main(String[] args) {
-//        String[] arr = {"SOOOL","XXXXO","OOOOO","OXXXX","OOOOE"};
-        String[] arr = {"LOOXS", "OOOOX", "OOOOO", "OOOOO", "EOOOO"};
-
-        System.out.println(solution(arr));
-    }
 }

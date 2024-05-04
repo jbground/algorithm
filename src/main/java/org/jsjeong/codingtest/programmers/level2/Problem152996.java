@@ -1,6 +1,7 @@
 package org.jsjeong.codingtest.programmers.level2;
 
 /**
+ * 시소 짝꿍
  * https://school.programmers.co.kr/learn/courses/30/lessons/152996
  */
 public class Problem152996 {
