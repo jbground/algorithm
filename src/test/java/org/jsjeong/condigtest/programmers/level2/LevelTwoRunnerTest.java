@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class Level2Runner {
+public class LevelTwoRunnerTest {
 
 
     @Test
@@ -158,5 +158,41 @@ public class Level2Runner {
     void Problem42746(){
         Problem42746 problem = new Problem42746();
         System.out.println(problem.solution(new int[]{3, 30, 34, 5, 9}));
+    }
+
+    @Test
+    void Problem1835(){
+        Problem1835 problem = new Problem1835();
+        System.out.println(problem.solution(2, new String[]{"N~F=0", "R~T>2"}));
+    }
+
+    @Test
+    void Problem17686(){
+        Problem17686 problem = new Problem17686();
+        System.out.println(Arrays.toString(problem.solution(new String[]{"F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"})));
+    }
+
+    @Test
+    void Problem68936(){
+        Problem68936 problem = new Problem68936();
+        System.out.println(Arrays.toString(problem.solution(new int[][]{{1,1,1,1,1,1,1,1},{0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1},{0,1,0,0,1,1,1,1},{0,0,0,0,0,0,1,1},{0,0,0,0,0,0,0,1},{0,0,0,0,1,0,0,1},{0,0,0,0,1,1,1,1}})));
+    }
+
+    @Test
+    void Problem42885(){
+        Problem42885 problem = new Problem42885();
+        System.out.println(problem.solution(new int[]{70, 50, 80, 50}, 100));
+    }
+
+    @Test
+    void Problem77485(){
+        Problem77485 problem = new Problem77485();
+        System.out.println(Arrays.toString(problem.solution(6, 6, new int[][]{{2, 2, 5, 4}, {3, 3, 6, 6}, {5, 1, 6, 3}})));
+    }
+
+    @Test
+    void Problem42577(){
+        Problem42577 problem = new Problem42577();
+        System.out.println(problem.solution(new String[]{"119", "97674223", "1195524421"}));
     }
 }

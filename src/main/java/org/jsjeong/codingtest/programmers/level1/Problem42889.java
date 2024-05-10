@@ -51,15 +51,9 @@ public class Problem42889 {
 //        return new int[1];
 //    }
 
-    public static void main(String[] args) {
-        Problem42889 P = new Problem42889();
-        System.out.println(stages);
-        int[] solution = P.solution(25, stages);
-        System.out.println(Arrays.toString(solution));
-    }
 
 
-    static class Stage implements Comparable{
+    static class Stage implements Comparable<Stage>{
         int num;
         int clear;
         int current;
@@ -70,7 +64,7 @@ public class Problem42889 {
         }
 
         @Override
-        public int compareTo(Object o) {
+        public int compareTo(Stage o) {
             return 0;
         }
     }

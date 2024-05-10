@@ -8,11 +8,7 @@ import java.util.Arrays;
  */
 public class Problem12915 {
 
-//    private static String[] strings = {"sun", "bed", "car"};
-    private static String[] strings = {"abce", "abcd", "cdx"};
-
     public String[] solution(String[] strings, int n){
-
         for(int i=0; i<strings.length-1;i++){
             for(int j = i + 1; j < strings.length; j++){
                 if(compareStrings(strings[i], strings[j], n) > 0){
@@ -49,10 +45,4 @@ public class Problem12915 {
         }
     }
 
-    public static void main(String[] args) {
-        Problem12915 P = new Problem12915();
-        System.out.println(Arrays.toString(strings));
-        String[] solution = P.solution(strings, 1);
-        System.out.println(Arrays.toString(solution));
-    }
 }

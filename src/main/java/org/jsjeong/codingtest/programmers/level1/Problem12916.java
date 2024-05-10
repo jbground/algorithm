@@ -5,7 +5,6 @@ package org.jsjeong.codingtest.programmers.level1;
  * https://school.programmers.co.kr/learn/courses/30/lessons/12916
  */
 public class Problem12916 {
-    private static String string = "abDHceFa";
 
     public boolean solution(String s){
 
@@ -21,16 +20,6 @@ public class Problem12916 {
         String string1 = new String(arr);
         return count == 0;
 
-
-
-
     }
 
-
-    public static void main(String[] args) {
-        Problem12916 P = new Problem12916();
-        System.out.println(string);
-        boolean solution = P.solution(string);
-        System.out.println(solution);
-    }
 }

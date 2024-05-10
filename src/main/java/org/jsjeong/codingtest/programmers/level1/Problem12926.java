@@ -10,7 +10,6 @@ package org.jsjeong.codingtest.programmers.level1;
  * z 122
  */
 public class Problem12926 {
-    private static String string = " . h zZ";
 
     public String solution(String s, int n) {
 
@@ -33,10 +32,4 @@ public class Problem12926 {
     }
 
 
-    public static void main(String[] args) {
-        Problem12926 P = new Problem12926();
-        System.out.println(string);
-        String solution = P.solution(string, 25);
-        System.out.println(solution);
-    }
 }

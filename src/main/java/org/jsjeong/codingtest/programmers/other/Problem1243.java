@@ -1,5 +1,8 @@
-package org.jsjeong.codingtest.programmers;
+package org.jsjeong.codingtest.programmers.other;
 
+/**
+ * 토마토 문자 찾기
+ */
 public class Problem1243 {
 
     public static void main(String[] args) {
