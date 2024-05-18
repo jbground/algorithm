@@ -1,8 +1,8 @@
-package org.jsjeong.codingtest.programmers;
+package org.jsjeong.codingtest.programmers.other;
 
 import java.util.*;
 
-public class Problem123 {
+public class Test42123 {
 
     public static void main(String[] args) {
         String[][] values = {{"100","ryan","music","2"}

@@ -1,4 +1,4 @@
-package org.jsjeong.codingtest.programmers;
+package org.jsjeong.codingtest.programmers.other;
 
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Problem {
+public class Test12123 {
 
     public long process(String[] birthdays) throws ParseException {
         long answer = 0;

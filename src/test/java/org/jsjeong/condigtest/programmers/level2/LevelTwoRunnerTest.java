@@ -2,6 +2,7 @@ package org.jsjeong.condigtest.programmers.level2;
 
 import org.jsjeong.codingtest.programmers.level2.Problem49993;
 import org.jsjeong.codingtest.programmers.level2.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -194,5 +195,55 @@ public class LevelTwoRunnerTest {
     void Problem42577(){
         Problem42577 problem = new Problem42577();
         System.out.println(problem.solution(new String[]{"119", "97674223", "1195524421"}));
+    }
+
+    @Test
+    void Problem154538(){
+        Problem154538 problem = new Problem154538();
+        System.out.println(problem.solution(10, 40, 5));
+
+    }
+
+    @Test
+    void Problem154539(){
+        Problem154539 problem = new Problem154539();
+//        System.out.println(Arrays.toString(problem.solution(new int[]{9, 1, 5, 3, 6, 2})));
+        System.out.println(Arrays.toString(problem.solution(new int[]{10, 1, 10, 2, 10, 3, 10, 10, 10, 11, 11, 11, 12})));
+        int[] answer = {11, 10, 11, 10, 11, 10, 11, 11, 11, 12, 12, 12, -1};
+        int[] result = problem.solution(new int[]{10, 1, 10, 2, 10, 3, 10, 10, 10, 11, 11, 11, 12});
+        Assertions.assertArrayEquals(answer, result);
+
+    }
+
+    @Test
+    void Problem42584(){
+        Problem42584 problem = new Problem42584();
+        System.out.println(Arrays.toString(problem.solution(new int[]{1, 2, 3, 2, 3})));
+    }
+
+    @Test
+    void Problem72412(){
+        Problem72412 problem = new Problem72412();
+        System.out.println(Arrays.toString(problem.solution(new String[]{"java backend junior pizza 150", "python frontend senior chicken 210", "python frontend senior chicken 150", "cpp backend senior pizza 260", "java backend junior chicken 80", "python backend senior chicken 50"}, new String[]{"java and backend and junior and pizza 100", "python and frontend and senior and chicken 200", "cpp and - and senior and pizza 250", "- and backend and senior and - 150", "- and - and - and chicken 100", "- and - and - and - 150"})));
+    }
+
+    @Test
+    void Problem148652(){
+        Problem148652 problem = new Problem148652();
+        System.out.println(problem.solution(2, 4, 17));
+
+    }
+
+    @Test
+    void Problem147354(){
+        Problem147354 problem = new Problem147354();
+        System.out.println(problem.solution(new int[][]{{2,2,6},{1,5,10},{4,2,9},{3,8,}}, 2, 2, 3));
+    }
+
+    @Test
+    void Problem138476(){
+        Problem138476 problem = new Problem138476();
+//        System.out.println(problem.solution(6, new int[]{1, 3, 2, 5, 4, 5, 2, 3}));
+        System.out.println(problem.solution(4, new int[]{1, 3, 2, 5, 4, 5, 2, 3}));
     }
 }
